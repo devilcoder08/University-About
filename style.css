@@ -1,0 +1,174 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto:wght@300;400;500&display=swap');
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Header Styles */
+header {
+    background-color: #000000;
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffffff;
+}
+
+/* Add university name after logo */
+.logo::after {
+    content: "Banaras Hindu University";
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Main Content Box */
+.box {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Images Layout */
+.img {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+.img img:first-child {
+    width: 400px;
+    height: 200px;
+}
+
+.img img:last-child {
+    width: 1170px;
+    height: 659px;
+    margin-top: 1rem;
+}
+
+/* Content Section */
+.content {
+    padding: 0 1rem;
+    margin-top: 2rem;
+}
+
+.content h1 {
+    font-family: 'Playfair Display', serif;
+    color: #000000;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    text-align: center;
+}
+
+.content h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, #000000, #666666);
+}
+
+.content div {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333333;
+    text-align: justify;
+    padding: 1rem 0;
+}
+
+/* Custom text selection */
+::selection {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .box {
+        margin: 2rem;
+    }
+    
+    .img img:last-child {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1170/659;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .logo {
+        flex-direction: column;
+    }
+    
+    .logo::after {
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+    }
+    
+    .box {
+        margin: 1rem;
+        padding: 1rem;
+    }
+    
+    .content h1 {
+        font-size: 2rem;
+    }
+    
+    .img {
+        gap: 1rem;
+    }
+    
+    .img img:first-child {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 2/1;
+    }
+}
